@@ -116,12 +116,38 @@ nav a:focus {
      }
 
   /* Step 11: Write the selector/rule property to update the .container class */
-
+     .container {
+          display: grid;
+          grid-template-columns: repeat(7, 1fr);
+     }
 
   /* Steps 12 - 15: Update the grid-column property of the grid's children (where-needed)*/
+     .accounts,
+     .security,
+     .contact {
+          grid-column: 4 / span 3;
+     }
 
+     .onlinebanking,
+     .loans {
+          grid-column: 2 / span 3;
+     }
 
+     .accounts-image,
+     .security-image,
+     .contact-image {
+          grid-column: 1 / span 5;
+     }
+
+     .onlinebanking-image,
+     .loans-image {
+          grid-column: 3 / span 5;
+     }
 
  /* Step 16:Write the selector/rule property to update the .text-block class */
+     .text-block {
+          max-height: 235px;
+          overflow: auto;
+     }
 
 }
